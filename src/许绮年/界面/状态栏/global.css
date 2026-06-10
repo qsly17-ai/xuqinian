@@ -1,0 +1,282 @@
+:root {
+  --qinian-paper: #f8f3e8;
+  --qinian-paper-strong: #fffaf0;
+  --qinian-ink: #191716;
+  --qinian-muted: #71665d;
+  --qinian-rule: #c8b8a0;
+  --qinian-rule-soft: rgba(64, 50, 42, 0.16);
+  --qinian-blue: #28576f;
+  --qinian-blue-soft: rgba(40, 87, 111, 0.14);
+  --qinian-red: #9b2f36;
+  --qinian-red-soft: rgba(155, 47, 54, 0.13);
+  --qinian-gold: #9a793d;
+  --qinian-violet: #5d536b;
+  --qinian-shadow: rgba(30, 23, 17, 0.18);
+}
+
+body {
+  margin: 0;
+}
+
+.qinian-shell {
+  width: min(100%, 760px);
+  margin: 12px auto;
+  padding: 14px;
+  color: var(--qinian-ink);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 240, 0.97), rgba(248, 243, 232, 0.92)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(40, 87, 111, 0.035) 0,
+      rgba(40, 87, 111, 0.035) 1px,
+      transparent 1px,
+      transparent 18px
+    );
+  border: 1px solid var(--qinian-rule);
+  border-left: 6px solid var(--qinian-red);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px var(--qinian-shadow);
+  font-family: "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", "Songti SC", serif;
+  letter-spacing: 0;
+  overflow: hidden;
+}
+
+.qinian-shell * {
+  box-sizing: border-box;
+}
+
+.qinian-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--qinian-rule-soft);
+}
+
+.qinian-kicker,
+.qinian-location {
+  margin: 0;
+  color: var(--qinian-muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.qinian-kicker {
+  color: var(--qinian-red);
+  font-weight: 700;
+}
+
+.qinian-header h1 {
+  margin: 5px 0;
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.qinian-risk {
+  min-width: 86px;
+  padding: 8px 10px;
+  text-align: center;
+  background: var(--qinian-blue-soft);
+  border: 1px solid rgba(40, 87, 111, 0.24);
+  border-radius: 6px;
+}
+
+.qinian-risk[data-tone="watch"] {
+  background: rgba(154, 121, 61, 0.16);
+  border-color: rgba(154, 121, 61, 0.32);
+}
+
+.qinian-risk[data-tone="danger"] {
+  background: var(--qinian-red-soft);
+  border-color: rgba(155, 47, 54, 0.34);
+}
+
+.qinian-risk span {
+  display: block;
+  color: var(--qinian-muted);
+  font-size: 11px;
+}
+
+.qinian-risk strong {
+  display: block;
+  margin-top: 2px;
+  color: var(--qinian-red);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.qinian-progress {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.qinian-progress span {
+  min-width: 0;
+  padding: 6px 4px;
+  color: var(--qinian-muted);
+  background: rgba(255, 250, 240, 0.68);
+  border: 1px solid var(--qinian-rule-soft);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.qinian-progress span.active {
+  color: var(--qinian-paper-strong);
+  background: var(--qinian-blue);
+  border-color: var(--qinian-blue);
+}
+
+.qinian-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.qinian-panel {
+  min-width: 0;
+  padding: 12px;
+  background: rgba(255, 250, 240, 0.72);
+  border: 1px solid var(--qinian-rule-soft);
+  border-radius: 6px;
+}
+
+.qinian-panel--task {
+  grid-column: 1 / -1;
+}
+
+.qinian-panel-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--qinian-muted);
+  font-size: 12px;
+}
+
+.qinian-panel-title strong {
+  color: var(--qinian-blue);
+  text-align: right;
+}
+
+.qinian-permission,
+.qinian-panel--task p {
+  margin: 0;
+  color: var(--qinian-ink);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.qinian-meters {
+  display: grid;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.qinian-meter-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  color: var(--qinian-muted);
+  font-size: 12px;
+}
+
+.qinian-meter-label strong {
+  color: var(--qinian-ink);
+}
+
+.qinian-meter-track {
+  height: 8px;
+  overflow: hidden;
+  background: rgba(64, 50, 42, 0.12);
+  border-radius: 999px;
+}
+
+.qinian-meter-track i {
+  display: block;
+  height: 100%;
+  min-width: 2px;
+  background: var(--qinian-blue);
+  border-radius: inherit;
+}
+
+.qinian-meter-track i[data-tone="stress"] {
+  background: var(--qinian-red);
+}
+
+.qinian-meter-track i[data-tone="stability"] {
+  background: var(--qinian-violet);
+}
+
+.qinian-clues {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qinian-clues li {
+  min-width: 0;
+  padding: 7px 8px;
+  background: rgba(40, 87, 111, 0.08);
+  border: 1px solid rgba(40, 87, 111, 0.16);
+  border-radius: 5px;
+}
+
+.qinian-clues li[data-status="已核对"],
+.qinian-clues li[data-status="已公开"] {
+  background: rgba(154, 121, 61, 0.14);
+  border-color: rgba(154, 121, 61, 0.24);
+}
+
+.qinian-clues span,
+.qinian-clues strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.qinian-clues span {
+  color: var(--qinian-ink);
+  font-size: 12px;
+}
+
+.qinian-clues strong {
+  margin-top: 2px;
+  color: var(--qinian-muted);
+  font-size: 11px;
+}
+
+@media (max-width: 560px) {
+  .qinian-shell {
+    padding: 10px;
+  }
+
+  .qinian-header,
+  .qinian-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qinian-risk {
+    width: 100%;
+  }
+
+  .qinian-progress {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .qinian-progress span:last-child {
+    grid-column: 1 / -1;
+  }
+}
