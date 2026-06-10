@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "调查阶段": {
+          "default": "拒绝委托",
+          "type": "string",
+          "enum": [
+            "拒绝委托",
+            "整理手稿",
+            "证词拼合",
+            "公开前夜",
+            "夺回叙述"
+          ]
+        },
+        "当前地点": {
+          "default": "澄灯书局档案室",
+          "type": "string"
+        },
+        "公开风险": {
+          "default": 20,
+          "type": "number"
+        },
+        "线索状态": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "删稿手稿": {
+              "default": "已发现",
+              "type": "string",
+              "enum": [
+                "未发现",
+                "可发现",
+                "已发现",
+                "已核对",
+                "已公开"
+              ]
+            },
+            "旧录音": {
+              "default": "未发现",
+              "type": "string",
+              "enum": [
+                "未发现",
+                "可发现",
+                "已发现",
+                "已核对",
+                "已公开"
+              ]
+            },
+            "读者来信": {
+              "default": "可发现",
+              "type": "string",
+              "enum": [
+                "未发现",
+                "可发现",
+                "已发现",
+                "已核对",
+                "已公开"
+              ]
+            },
+            "门生名单": {
+              "default": "未发现",
+              "type": "string",
+              "enum": [
+                "未发现",
+                "可发现",
+                "已发现",
+                "已核对",
+                "已公开"
+              ]
+            },
+            "出版社合同": {
+              "default": "未发现",
+              "type": "string",
+              "enum": [
+                "未发现",
+                "可发现",
+                "已发现",
+                "已核对",
+                "已公开"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "许绮年": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "信任度": {
+          "default": 10,
+          "type": "number"
+        },
+        "压力值": {
+          "default": 35,
+          "type": "number"
+        },
+        "叙述稳定度": {
+          "default": 45,
+          "type": "number"
+        },
+        "关系阶段": {
+          "default": "证人距离",
+          "type": "string",
+          "enum": [
+            "证人距离",
+            "谨慎同盟",
+            "共同执笔",
+            "恋人未确认",
+            "恋人"
+          ]
+        },
+        "亲密许可": {
+          "default": "拒绝触碰",
+          "type": "string",
+          "enum": [
+            "拒绝触碰",
+            "允许陪伴",
+            "允许拥抱",
+            "允许亲吻"
+          ]
+        }
+      }
+    },
+    "主角": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "调查身份": {
+          "default": "受托调查者",
+          "type": "string"
+        },
+        "当前任务": {
+          "default": "核对删稿手稿的页码、来源和删改痕迹",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
