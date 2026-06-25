@@ -24,7 +24,11 @@
     "@types/toastr": "^2.1.43",
     "@types/webpack": "^5.28.5",
     "@typescript-eslint/parser": "^8.62.0",
+<<<<<<< HEAD
     "autoprefixer": "^10.5.1",
+=======
+    "autoprefixer": "^10.5.2",
+>>>>>>> 4f0b745981550e95a66a32adf5b43f01a2cde104
     "chokidar": "^4.0.3",
     "css-loader": "^7.1.4",
     "eslint": "^9.39.4",
