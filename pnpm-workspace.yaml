@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
   - baseline-browser-mapping
@@ -9,5 +10,9 @@ allowBuilds:
   electron: true
   esbuild: true
   javascript-obfuscator: true
+=======
+allowBuilds:
+  '@parcel/watcher': true
+>>>>>>> b6c722413d8cfdaf014bbb3f87518fd8c19754be
   unrs-resolver: true
   vue-demi: true
